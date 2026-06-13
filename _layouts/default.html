@@ -3,13 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {% seo %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": {{ '/#business' | absolute_url | jsonify }},
+    "name": {{ site.title | jsonify }},
+    "url": {{ '/' | absolute_url | jsonify }},
+    "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+    "logo": {{ site.logo | absolute_url | jsonify }},
+    "image": {{ site.image | absolute_url | jsonify }},
+    "description": {{ page.description | default: site.description | strip_newlines | jsonify }},
+    "founder": {
+      "@type": "Person",
+      "name": {{ site.author.name | jsonify }}
+    },
+    "email": {{ site.contact.email | jsonify }},
+    "telephone": {{ site.contact.phone_uri | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": {{ site.contact.city | jsonify }},
+      "addressRegion": {{ site.contact.region | jsonify }},
+      "addressCountry": {{ site.contact.country | jsonify }}
+    },
+    "areaServed": [
+      {
+        "@type": "AdministrativeArea",
+        "name": "Central Valley, California"
+      },
+      {
+        "@type": "City",
+        "name": "Modesto"
+      }
+    ],
+    "serviceType": [
+      "Process development consulting",
+      "Continuous improvement coaching",
+      "Process improvement consulting",
+      "Operational workflow consulting"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -38,7 +77,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p class="footer-contact">
-        Phone: <a href="tel:2092025346">{{ site.contact.phone }}</a> |
+        Phone: <a href="tel:{{ site.contact.phone_uri }}">{{ site.contact.phone }}</a> |
         Email: <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
       </p>
       <p class="footer-copy">&copy; {{ 'now' | date: "%Y" }} Kee Process Solutions</p>

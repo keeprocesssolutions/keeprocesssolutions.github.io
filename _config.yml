@@ -1,7 +1,13 @@
 title: Kee Process Solutions
-description: Process Development Consulting and Continuous Improvement Coaching
-baseurl: "/keeprocesssolutions.com"
-url: ""
+description: Process development consulting and continuous improvement coaching for businesses in Modesto, California and the Central Valley.
+url: "https://keeprocesssolutions.com"
+baseurl: ""
+lang: en_US
+timezone: America/Los_Angeles
+logo: /assets/images/logo.svg
+image: /assets/images/hero-trees.jpg
+author:
+  name: Hayden Kee
 
 # Build settings
 markdown: kramdown
@@ -23,4 +29,8 @@ nav_links:
 # Contact info
 contact:
   phone: "209-202-5346"
+  phone_uri: "+12092025346"
   email: "Hayden.kee@keeprocesssolutions.com"
+  city: "Modesto"
+  region: "CA"
+  country: "US"

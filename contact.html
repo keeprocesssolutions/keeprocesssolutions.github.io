@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Contact
-description: Reach out to Kee Process Solutions for a free evaluation. Call, text, or email Hayden Kee today.
+title: Contact Kee Process Solutions
+description: Contact Kee Process Solutions in Modesto, California for a free process development or continuous improvement consulting evaluation.
 ---
 
 <!-- Page Hero -->
 <section class="page-hero">
   <div class="container">
     <span class="section-label">Get In Touch</span>
-    <h1>Contact</h1>
+    <h1>Contact Kee Process Solutions</h1>
     <p>Reach out for your free evaluation today.</p>
   </div>
 </section>
@@ -33,7 +33,7 @@ description: Reach out to Kee Process Solutions for a free evaluation. Call, tex
           <div>
             <div class="contact-item-label">Email Me</div>
             <div class="contact-item-value">
-              <a href="mailto:Hayden.kee@keeprocesssolutions.com">Hayden.kee@keeprocesssolutions.com</a>
+              <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ description: Reach out to Kee Process Solutions for a free evaluation. Call, tex
           <div>
             <div class="contact-item-label">Call or Text Me</div>
             <div class="contact-item-value">
-              <a href="tel:2092025346">209-202-5346</a>
+              <a href="tel:{{ site.contact.phone_uri }}">{{ site.contact.phone }}</a>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@ description: Reach out to Kee Process Solutions for a free evaluation. Call, tex
           </div>
           <div>
             <div class="contact-item-label">Based In</div>
-            <div class="contact-item-value">Modesto, California — Central Valley</div>
+            <address class="contact-item-value">Modesto, California — Central Valley</address>
           </div>
         </div>
       </div>
@@ -71,9 +71,9 @@ description: Reach out to Kee Process Solutions for a free evaluation. Call, tex
           <span class="section-label">Free Evaluation</span>
           <h3>Ready to Unlock Your Business's Full Potential?</h3>
           <p>No commitment required. Just a straightforward conversation about where your operation is today and where it could be.</p>
-          <a href="mailto:Hayden.kee@keeprocesssolutions.com" class="btn-primary">Email Hayden</a>
+          <a href="mailto:{{ site.contact.email }}" class="btn-primary">Email Hayden</a>
           <p class="or-divider">— or —</p>
-          <a href="tel:2092025346" class="phone-link">Call / Text: 209-202-5346</a>
+          <a href="tel:{{ site.contact.phone_uri }}" class="phone-link">Call / Text: {{ site.contact.phone }}</a>
         </div>
       </div>
 
